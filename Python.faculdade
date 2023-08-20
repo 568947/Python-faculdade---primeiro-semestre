@@ -1,0 +1,327 @@
+"""
+idades = [] # Aqui eu nomeei minha lista o que eu quero usar.
+
+
+idade = int(input("digite quantas idades vc quiser: "))#coloquei o input para entrar com as idades
+
+while idade != 0:# nesse comando eu falei que enquanto minha idade for difrente de 0 eu quero que, na minha lista de idades seja adicionado mais inputes.
+    idades.append(idade) # Aqui eu falei para adicionar mais idades com o append.
+    idade = int(input("digite quantas idades vc quiser: "))
+
+if len(idades) > 0: # Aqui eu falei se meu resultado final de idades for diferente de 0 eu quero fazer minha media
+    media = sum(idades) / len(idades) # aqui eu usei o sum para somar minhas idades inputadas e dividir pelo total de input com len.
+    print("A media das idades é:", (media)) 
+    
+else:
+    print("Nenhum valor inserido!")
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+idades = []
+quantidade = [0, 0, 0, 0, 0]
+
+for i in range(100):
+    idade = int(input(f"Digite a idade da pessoa {i + 1}: "))
+    idades.append(idade)
+
+for idade in idades:
+    if idade <= 15:
+        quantidade[0] += 1
+    
+    elif 16 <= idade <= 30:
+        quantidade[1] += 1
+    
+    elif 31 <= idade <= 45:
+        quantidade [2] += 1
+    
+    elif 46 <= idade <= 60:
+        quantidade[3] += 1
+    
+    else:
+        quantidade[4] += 1
+total_de_pessoas = len(idades)
+porcentagem_primeira_faixa = (quantidade[0] / total_de_pessoas) * 100
+porcentagem_ultima_faixa = (quantidade[4] / total_de_pessoas) * 100
+print("Quantidades de pessoas por faixa etaria: ")
+print("Primeira faixa até 15 anos:", (quantidade[0]))
+print("Segunda faixa de 16 até 30 anos:", (quantidade[1]))
+print("Terceira faixa 31 até 45 anos:", (quantidade[2]))
+print("Quarta faixa 46 até 60 anos:", (quantidade[3]))
+print("Primeira faixa até 60 anos:", (quantidade[4]))
+
+print("Qunatidade de pessoas na primeira faixa etaria:", (porcentagem_primeira_faixa))
+print("Qunatidade de pessoas na ultima faixa etaria:", (porcentagem_ultima_faixa))
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+valor_total_vista = 0
+valor_total_prazo = 0
+valor_total_transacoes = 0
+
+# Obter os códigos e valores das 100 transações
+for i in range(100):
+    codigo = input(f"Digite o código da transação {i + 1}: ")
+    valor = float(input(f"Digite o valor da transação {i + 1}: "))
+
+    if codigo == 'V':
+        valor_total_vista += valor
+    elif codigo == 'P':
+        valor_total_prazo += valor
+
+    valor_total_transacoes += valor
+
+# Exibir os resultados
+print("Valor total das transações à vista:", valor_total_vista)
+print("Valor total das transações a prazo:", valor_total_prazo)
+print("Valor total de todas as transações:", valor_total_transacoes)
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+n1 = float(input ("digite sua avp1: "))
+n2 = float(input ("digite sua avp2: "))
+n3 = int(input(" digite seu tde 1: "))
+n4 = int(input(" digite seu tde 2: "))
+n5 = int(input(" digite seu tde 3: "))
+n6 = int(input(" digite seu tde 4: "))
+s1 = n1*0.4
+s2 = n2*0.4
+s3 = ((n3+n4)/2) *0.1 
+s4 = ((n5+n6)/2) *0.1
+avp1 = s1 + s3
+avp2 = s2 + s4 
+media = avp1 + avp2 
+if media >= 4:
+    print( "Está na avf!")
+else:
+    print("Aprovado, parabens!")
+print("sua nota 1 é {}".format(avp1))
+print("sua nota 2 é {}".format(avp2))
+print("sua media final é {}".format(media))
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+num = int(input("Digite seu numero: "))
+for i in range(0,11):
+    t = num*i
+    print( "{} x {} = {}".format(num, i, t))
+    
+from datetime import date
+ano = float(input("Digite seu ano. Ou digite 0 para saber o atual: "))
+if ano == 0:
+       ano = date.today().year
+     
+if ano % 4 and ano % 100:
+    print("o ano de {} Não é bisexto!".format(ano))
+else:
+    print('o ano de {} é biseexto'.format(ano))
+    
+num1 = int(input("Digite seu  numero 1: "))
+num2 = int(input("Digite seu numero 2: "))
+num3 = int(input("Digite seu  numero 3: "))
+if num1 < num2 and num1 < num3:
+    menor = num1
+elif num2 < num1 and num2 < num3:   
+    menor = num2
+elif num3 < num1 and num3 < num2:
+    menor = num3
+if num1 > num2 and num1 > num3:
+    maior = num1
+elif num2 > num1 and num2 > num3:
+    maior = num2
+elif num3 > num1 and num3 > num2:
+    maior = num3 
+print("O maior numero Digitado foi {}".format(maior))
+print("O menor numero digitado foi {}".format(menor))
+
+produto = float(input("Coloque o valor do produto: "))
+vlr_mensal = float(input("Digite quanto o produto vende: "))
+
+if vlr_mensal < 500 and produto < 30:
+    aumento = produto + (produto * 10 /100)
+    print("Esse é o novo valor do seu produto {:.2f}R$".format(aumento))
+elif vlr_mensal >= 500 and vlr_mensal < 1200 and produto >= 30 and produto < 80:
+    aumento = produto + (produto * 15 / 100)
+    print("O valor so seu novo produto é {:.2f}R$".format(aumento))
+elif vlr_mensal >= 1200 and produto >= 80:
+    diminuicao = produto - (produto * 20 / 100)     
+    print("O seu novo valor do produto é {:.2f}R$".format(diminuicao))
+    
+    
+saldo = float(input("Digite seu saldo: "))
+
+if saldo <= 100:
+    aumento = saldo + (saldo * 0 / 100)
+    print("Incompetente! você não recebeu aumento.")
+elif 100 > saldo <= 500:
+    aumento = saldo + (saldo * 10 / 100)
+
+elif saldo > 500 and saldo <= 1000:
+    aumento = saldo + (saldo * 15 / 100)
+
+elif saldo > 1000:
+    aumento = saldo + (saldo * 20 / 100)
+
+print("Parabens soldado seu antigo saldo era de {:.2f}R$ com seu aumento ele ficou de {:.2f}R$".format(saldo, aumento))
+"""
+
+
+"""
+///////////////////////////////////////////////////////////////
+vlr_casa = float(input("Digite o valor da casa R$: " ))
+vlr_salario = float(input("Digite seu salario R$: "))
+anos = int(input("Em quantos anos você quer pagar essa casa? "))
+
+prestacao_mensal = vlr_casa // 12 
+exeder = vlr_salario * 30 / 100
+
+if prestacao_mensal >= exeder:
+    print("Emprestimo Aprovado!")
+else:
+    print("Emprestimo negado!")
+////////////////////////////////////////////////////////////////
+
+num1 = int(input("Digite o primeiro numero: "))
+num2 = int(input("Digite seu segundo numero: "))
+
+if num1 > num2:
+    maior = num1 
+    print("O primeiro numero digitado do é o maior {}".format(maior))
+elif num2 > num1:
+    maior = num2
+    print("O segundo numero digitado é o maior {}".format(maior))
+elif num1 == num2:
+    maior =  num1 and num2
+    print("Ambos numeros digitados tem os valores iguais {} e {}".format(num1, num2))
+    
+///////////////////////////////////////////////////////////////////////////
+
+ano = int(input("Digite o seu ano de nascimento: "))
+alistamento = (ano - 2023) * -1
+print(alistamento)
+if alistamento < 18:
+    print("Você ainda nao esta na idade de se alistar!")
+elif alistamento > 18 and alistamento <= 22:
+    print("Você esta na idade de se alistar!")
+elif alistamento > 22:
+    print('Já passou do momento de você se alistar! ')
+    
+///////////////////////////////////////////////////////////////////////////////////////////]
+ano = int(input("Digite o seu ano de nascimento: "))
+alistamento = (ano - 2023) * -1
+print(alistamento)
+if alistamento < 18:
+    idade = (alistamento - 18) * -1
+    print("Você ainda não esta na idade de se alistar! falta {} anos para você se alistar.".format(idade))
+elif alistamento > 18 and alistamento <= 22:
+    print("Você esta na idade de se alistar!")
+elif alistamento > 22:
+    print('Já passou do momento de você se alistar! ')
+    
+//////////////////////////////////////////////////////////////////////////////////////////
+idade = int(input("Digite sua idade: "))
+if idade <= 9:
+    print("Mirim")
+elif idade > 9 and idade <=14:
+    print("Infantil")
+elif idade > 14 and idade <= 19:
+    print("Junior")
+elif idade > 19 and idade <= 20:
+    print("Senior")
+else: 
+    print("Master")    
+
+"""
+"""
+soma = 0
+num = int(input("Digite o numero: "))
+for i in range(1, num +1):
+    if num % i == 0 and i % 2 != 0:
+        soma += i
+print("A soma do seu numero {} é {}.".format(num, soma ))
+
+
+
+num = int(input("Digite seu numero:"))
+min = int(input("Digite o numero min: "))
+max = int(input("Digite seu numero max: "))
+for i in range ( min , max+1):
+    if i % num == 0 and i % 2 == 0: # A ordem do i altera o valor !!!
+        print(i, end = " ")
+
+
+num = int(input("Digite seu numero: "))
+num2 = int(input("Digite seu segundo numero: "))
+impares = 0
+pares = 0
+
+for i in range(num2, num +1):
+    if i % 2 == 0:
+        pares += 1
+    else:
+        impares += 1
+print("Impares: ", impares)
+print("pares", pares )
+
+idades = [0,0,0,0,0]
+for i in range(10):
+    num = int(input(f"Digite sua idade {i + 1}: "))
+    if num <= 15:
+        idades [0] += 1
+    elif 16 > num <= 30:
+        idades [1] += 1 
+    elif 31 > num <= 45:
+        idades[2] += 1 
+    elif 46 > num <= 60:
+        idades[3] += 1 
+    else:
+        idades[4] +=1 
+porcentagem_menor= (idades[0] // 10) * 100
+porcetagem_maior = (idades[4] // 10) * 100
+print(" Até 15 anos: {}".format(idades[0]))    
+print("De 16 até 30 anos: {}".format(idades[1]))    
+print("De 31 até 45 anos: {}".format(idades[2]))
+print("De 46 até 60 anos: {}".format(idades[3]))
+print("Maior de 60 anos: {}".format(idades[4]))
+
+print("A porcentagem de pessoas abaixo de 15 anos é {}%".format(porcentagem_menor))
+print("A porcentagem de pessoas maiores de 60 anos é {}%".format(porcetagem_maior))      
+
+vista = 0
+prazo = 0
+total = 0
+
+for i in range(10):
+    vlr = float(input("Digite seu o valor do seu produto R$: "))
+    codigo_barra = str(input("Digite se é a Prazo (p) ou a vista (v): "))
+    
+    if codigo_barra == "v":
+        vista += vlr
+    elif codigo_barra == 'p':
+        prazo += vlr
+total = vista + prazo
+print("A soma dos valores a vista foi de {:.2f}R$:".format(vista))
+print ("A soma dos valores a prazo foi de {:.2f}R$:".format(prazo))
+print("O valor total das suas compras foi de {:.2f}R$:".format(total))
+
+
+idades = []
+num = int(input("Digite as idades: "))
+while num != 0:
+    idades.append(num) # tem que vir primeiro que o input.
+    num = int(input(f"Digite as idades:"))
+if len(idades) > 0:
+    media = sum(idades) // len(idades)
+else:
+    print("Erro")
+    
+print("A media das idades que você digitou é {}".format(media))
+
+
+
+funcionario = int(input("Digite a quantidade de funcionarios: "))
+q_tt = 0
+for i in range(funcionario):
+    salarios = float(input("Digite os salarios dos funcionarios R$: "))
+    q_tt += salarios
+    media = q_tt / funcionario
+   
+print("A media salarial da empresa é {:.2f}R$".format(media))   
+"""
+
+

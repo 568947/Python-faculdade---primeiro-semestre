@@ -1,0 +1,165 @@
+#include <stdio.h>
+
+//receber os dados do meu usuario:
+    //nome
+    //salario
+    //total de vendas
+// fazer o calculo de vendas
+    // A cada venda ele recebe 15%
+//digite seu nome
+//digite seu salario
+//digite o total de vendas
+//vendas + 15%
+int main (void)
+{
+  char nome [50];
+  
+  scanf("%s", nome);
+  
+  double salario;
+  
+  scanf("%lf", &salario);
+
+  double vendas;
+  
+  scanf("%lf", &vendas);
+
+  double comissao = (vendas * 0.15);
+
+  double total = salario + comissao;
+  
+  printf("TOTAL = R$ %.2lf\n", total);
+  
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+    int a, b, s;
+    scanf("%i %i %i", &a, &b, &s);
+
+    int maiorab = (a + b + abs(a - b)) / 2;
+    int maior = (maiorab + s + abs(maiorab - s)) / 2;
+
+    printf("%d eh o maior\n", maior);
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+#include <math.h>
+
+int main (void)
+{
+  double a, b , c;
+  scanf(" %lf %lf %lf", &a, &b, &c);
+  float delta = (b * b) - 4 * a * c;
+  
+  if (delta <= 0 || a == 0 ){
+    printf("Impossivel calcular\n");
+    
+  }
+    
+  else
+  {
+    double r1 = (-b + sqrt(delta)) / ( 2*a);
+    double  r2 = (-b - sqrt(delta )) /( 2*a);
+    printf("R1 = %.5lf\n", r1);
+    printf("R2 = %.5lf\n", r2);
+  }
+  return 0;  
+  
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+#include <stdio.h>
+
+
+int main (void)
+{
+  int cod;
+  scanf("%d", &cod);
+  int quant;
+  scanf("%d", &quant);
+  if (cod == 1)
+  {
+    double total = 4.00 * quant;
+    printf("Total: R$ %.2lf\n", total );
+  }
+  else if (cod == 2)
+  {
+    double total = 4.50 * quant;
+    printf("Total: R$ %.2lf\n", total );
+  }
+  else if (cod == 3)
+  {
+    double total = 5.00 * quant;
+    printf("Total: R$ %.2lf\n", total );
+  }
+  else if (cod == 4)
+  { 
+    double total = 2.00 * quant;
+    printf("Total: R$ %.2lf\n", total );
+  }
+  else if (cod == 5)
+  {
+    double total = 1.50 * quant;
+    printf("Total: R$ %.2lf\n", total );
+  }
+  return 0;
+}
+
+ 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+#include <stdio.h>
+int main (void)
+{
+  double n1, n2, n3, n4;
+  
+  scanf("%lf %lf %lf %lf", &n1, &n2, &n3, &n4);
+  
+  int div = 2 + 3 + 4 + 1; 
+  
+  double soma = (n1 * 2) + (n2*3) + (n3*4) + (n4*1);
+  
+  double mediapond =  soma / div;
+  printf("Media: %.1lf\n", mediapond);
+  
+  if (mediapond >= 7)
+  {
+    printf("Aluno aprovado.\n");
+  }
+    
+  else if (mediapond <= 5)
+  {
+    printf("Aluno reprovado.\n");
+  }
+    
+  else if (mediapond >= 5 && mediapond < 6.9)
+  {
+    
+   printf("Aluno em exame.\n");
+    
+    double exame;
+    scanf("%lf", &exame);
+    
+    double md2 = (exame + mediapond) / 2;
+    
+    printf("Nota do exame: %.1lf\n", exame);
+    
+    if ( md2 >= 5){
+      printf("Aluno aprovado.\n");
+      
+      printf("Media final: %.1lf\n", md2);
+
+
+    }
+    else if (md2 < 4.9){
+       printf("Aluno reprovado\n");
+      
+      printf("Media final: %1.lf\n", md2);
+    }
+    
+    
+  }
+  
+}
